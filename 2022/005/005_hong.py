@@ -26,7 +26,7 @@ def dfsB(x, y, color):
         return False
     if grid[x][y] == 'R':
         grid[x][y] = 'G'
-    if grid[x][y] == color:
+    if grid[x][y] == color: # or (grid[x][y] != 'B' and color != 'B'):
         if visitB[x][y] == 0:
             visitB[x][y] = 1
             dfsB(x + 1, y, color)
